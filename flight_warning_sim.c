@@ -1,5 +1,9 @@
 //Delvin Buckley
 //Program 8
+/*This project simulates a multithreaded flight warning system using POSIX threads. 
+Two producer threads read simulated flight accelerometer data (accl1.dat, accl2.dat) containing pitch, roll, and yaw values. 
+When pitch or roll exceed safe thresholds (±20°), the producers generate warnings. 
+A consumer thread acts as the central warning monitor, printing these alerts.*/
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -180,4 +184,5 @@ int main (int agrc, char* argv[]) {
     }
 
     exit(EXIT_SUCCESS);
+
 }
